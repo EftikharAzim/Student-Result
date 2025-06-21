@@ -1,0 +1,29 @@
+@model StudentCourseResults.Models.StudentResult
+
+<h2>Create Student Result</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label asp-for="StudentName"></label>
+        <input asp-for="StudentName" />
+        <span asp-validation-for="StudentName" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="CourseTitle"></label>
+        <input asp-for="CourseTitle" />
+        <span asp-validation-for="CourseTitle" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="TotalMarks"></label>
+        <input asp-for="TotalMarks" />
+        <span asp-validation-for="TotalMarks" class="text-danger"></span>
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

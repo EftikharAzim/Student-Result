@@ -1,0 +1,32 @@
+@model StudentCourseResults.Models.StudentResult
+
+<h2>Edit Student Result</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div>
+        <label asp-for="StudentName"></label>
+        <input asp-for="StudentName" />
+        <span asp-validation-for="StudentName" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="CourseTitle"></label>
+        <input asp-for="CourseTitle" />
+        <span asp-validation-for="CourseTitle" class="text-danger"></span>
+    </div>
+
+    <div>
+        <label asp-for="TotalMarks"></label>
+        <input asp-for="TotalMarks" />
+        <span asp-validation-for="TotalMarks" class="text-danger"></span>
+    </div>
+
+    <button type="submit">Save</button> |
+    <a asp-action="Index">Cancel</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

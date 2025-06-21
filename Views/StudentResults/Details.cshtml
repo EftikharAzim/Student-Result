@@ -1,0 +1,20 @@
+@model StudentCourseResults.Models.StudentResult
+
+<h2>Student Result Details</h2>
+
+<div>
+    <h4>@Model.StudentName</h4>
+    <dl>
+        <dt>Course Title</dt>
+        <dd>@Model.CourseTitle</dd>
+
+        <dt>Total Marks</dt>
+        <dd>@Model.TotalMarks</dd>
+
+        <dt>Status</dt>
+        <dd>@Model.Status</dd>
+    </dl>
+</div>
+
+<a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+<a asp-action="Index">Back to List</a>
